@@ -1,7 +1,6 @@
 MongoDB Server vorbereiten
 
 1.MongoDB herunterladen und starten </p>
-
 2.Neue Verbindung erstellen mit URI " mongodb://localhost:27017 "
 
 !Achtung Datenbank noch nicht erstellt. Nach dem Aufruf des POST Element_Anfangswerte wird die Datenbank für die Daten angelegt. Datenbank unter Shopkatalog > Shopkatalogs zu finden
