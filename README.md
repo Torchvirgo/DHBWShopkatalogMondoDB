@@ -10,6 +10,7 @@ Schnittstelle starten</p>
 Postman</p>
 1.Postman Collection herunterladen und importieren.</p>
 2.POST Element_Anfangswerte auszuführen um einige Beispielwerte in die Datenbank einzutragen.</p>
+</p>
 !ID Werte von unseren Testserver sind als Beispiel enthalten. Müssen bei sich die passenden ID aus der Datenbank oder über die GET Befehle besorgen um die ID Befehle zu testen.
 
 
