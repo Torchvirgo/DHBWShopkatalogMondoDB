@@ -25,44 +25,13 @@ module.exports = mongoose => {
           kindPants: String,
           pantsize: String,
 
-        },
-        //Unnötig?
-        {//Schuhe
-          title: String,
-          description: String,
-          //picture: File,
-          preis: Decimal128,
-          endDate: Date,
-          type: String,
-          //Spezialisierte Attribute
-        /*   bootsize: Int16Array,
-          kindBoot: String, */
+          //Spezialisierte Attribute Hemd
+          kindShirt: String,
+          shirtsize: String,
 
-
+          
         },
-        {//Hüte
-          title: String,
-          description: String,
-          //picture: File,
-          preis: Decimal128,
-          endDate: Date,
-          type: String,
-          //Spezialisierte Attribute
-          kindHat: String,
-
-        },
-        {//Hoßen
-          title: String,
-          description: String,
-          //picture: File,
-          preis: Decimal128,
-          endDate: Date,
-          type: String,
-          //Spezialisierte Attribute
-          kindPants: String,
-          pantsize: String,
-
-        },
+        
         { timestamps: true }
       )
     );

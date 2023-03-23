@@ -4,28 +4,25 @@ module.exports = app => {
   
     var router = require("express").Router();
   
-    // Create a new Tutorial
+    // Erstelle Shopeintrag
     router.post("/", controller.create);
 
-    // Erstelle mehrere Elemente
+    // Erstelle mehrere Shopeinträge
     router.post("/many",controller.createMany);
   
-    // Retrieve all Tutorials
+    // Ausgeben Shopeinträge
     router.get("/", controller.findAll);
-  
-    // Retrieve all published Tutorials
-    router.get("/published", controller.findAllPublished);
-  
-    // Retrieve a single Tutorial with id
+
+    // Ausgabe über ID
     router.get("/:id", controller.findOne);
   
-    // Update a Tutorial with id
+    // Ändern mit id
     router.put("/:id", controller.update);
   
-    // Delete a Tutorial with id
+    // Löschen mit id
     router.delete("/:id", controller.delete);
   
-    // Delete all Tutorials
+    // Löschen aller Einträge
     router.delete("/", controller.deleteAll);
   
     //Filtern Preis
