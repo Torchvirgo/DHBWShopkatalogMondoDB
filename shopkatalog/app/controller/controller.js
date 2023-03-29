@@ -170,11 +170,11 @@ exports.delete = (req, res) => {
       .then(data => {
         if (!data) {
           res.status(404).send({
-            message: `Kann Shopeintrag mit id=${id} nicht löschen. Element gibt es nicht?`
+            message: `Kann Shopeintrag mit id=${id} nicht löschen. Eintrag gibt es möglicherweise nicht?`
           });
         } else {
           res.send({
-            message: "Element gelöscht"
+            message: "Eintrag gelöscht"
           });
         }
       })
@@ -190,7 +190,7 @@ exports.delete = (req, res) => {
   Shopkatalog.deleteMany({})
     .then(data => {
       res.send({
-        message: `${data.deletedCount} Elemente erfolgreich gelöscht!`
+        message: `${data.deletedCount} Einträge erfolgreich gelöscht!`
       });
     })
     .catch(err => {
@@ -205,16 +205,15 @@ exports.delete = (req, res) => {
 //Ausgabe alle mit gleichen Preis / höheren Preis
 exports.findAllPreis = (req, res) =>{
   const preis = req.params.wert;
-  //({preis: {$gte:200} }) Größer Gleiche FIltern
 
-  Shopkatalog.find({preis: {$gte:preis} })
+  Shopkatalog.find({preis: {$gte:preis} })//Größer Gleiche preis Filtern
   .then(data => {
     res.send(data);
   })
   .catch(err => {
     res.status(500).send({
       message:
-        err.message || "Fehler beim abrufen des Elements."
+        err.message || "Fehler beim abrufen des Eintrages."
     });
   });
 };

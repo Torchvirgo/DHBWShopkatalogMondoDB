@@ -16,10 +16,9 @@ app.use(bodyParser.json());
 // Bodyparser Anfrage - Anwendnung/urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Simple Get Prüfung
 
 
-//Routen für Get/POST/DELETE
+//Routen für Get/POST/DELETE HTML Anfragen
 require("./app/routes/routes.js")(app);
 
 
@@ -29,8 +28,7 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
 
-//Aufrufen Routenliste
-require("./app/routes/routes")(app);
+
 
 const db = require("./app/models");
 db.mongoose
